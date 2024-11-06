@@ -1,5 +1,5 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import './index.css'
 import App from './App.jsx'
@@ -7,18 +7,18 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Login from './pages/Login'
-import Error from './components/Error'
-import Doctors from './components/Doctors'
-import MyProfile from './components/MyProfile'
-import MyAppointments from './components/MyAppointments'
-import Appointment from './components/Appointment'
+import Doctors from './pages/Doctors'
+import MyProfile from './pages/MyProfile'
+import MyAppointments from './pages/MyAppointments'
+import Appointment from './pages/Appointment'
+import ErrorPage from './pages/ErrorPage'
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <Error />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
